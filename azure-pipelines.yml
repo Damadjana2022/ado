@@ -7,7 +7,7 @@ trigger:
 - main
 
 pool:
-  vmImage: ubuntu-latest
+  name:Lenovo13
 
 steps:
 - script: echo Hello, world!
