@@ -7,7 +7,7 @@ trigger:
 - main
 
 pool:
-  name:Lenovo13
+  name: Lenovo13
 
 steps:
 - script: echo Hello, world!
