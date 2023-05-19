@@ -13,7 +13,7 @@ pool:
 
 #Global settings
 variables:
-- group: CCH
+- group: CCH_1
 
 # Path to local folder on HOST from pool where is UFT Launcher
 - name: UFT_LAUNCHER
