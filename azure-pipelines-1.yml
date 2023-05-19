@@ -24,7 +24,6 @@ steps:
   inputs:
     testPathInput: 'd:\demo\demo'
     uploadArtifact: 'yes'
-    artifactType: 'bothReportArchive'
     mcAuthType: 'basic'
 
   
