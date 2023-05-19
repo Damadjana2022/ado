@@ -23,7 +23,7 @@ steps:
 - task: RunFromFileSystemTask@5
   inputs:
     testPathInput: 'd:\demo\demo'
-    uploadArtifact: 'yes'
+    uploadArtifact: 'no'
     mcAuthType: 'basic'
 
   
