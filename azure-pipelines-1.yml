@@ -20,7 +20,12 @@ variables:
   value: 'C:\UFT_Launcher\UFT\UFTWorking'
 
 steps:
-
+- task: RunFromFileSystemTask@5
+  inputs:
+    testPathInput: 'd:\demo\demo'
+    uploadArtifact: 'yes'
+    artifactType: 'bothReportArchive'
+    mcAuthType: 'basic'
 
   
 
