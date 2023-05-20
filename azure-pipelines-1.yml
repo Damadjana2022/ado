@@ -20,13 +20,14 @@ variables:
   value: 'C:\UFT_Launcher\UFT\UFTWorking'
 
 steps:
+
 - task: RunFromFileSystemTask@5
   inputs:
-    testPathInput: 'd:\demo\demo'
-    testPathInput: 'd:\demo\demo'
+    testPathInput: |
+      d:\demo\demo
+      d:\demo\demo
     uploadArtifact: 'no'
     mcAuthType: 'basic'
-
 
 
 # JOB UFT/ALM Reporte 
