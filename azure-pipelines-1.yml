@@ -25,6 +25,7 @@ steps:
   inputs:
     testPathInput: |
       d:\demo\demo
+      d:\demo\demo
     uploadArtifact: 'no'
     mcAuthType: 'basic'
 
