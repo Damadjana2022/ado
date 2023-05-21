@@ -34,7 +34,7 @@ steps:
 - task: PublishTestResults@2
   inputs:
     testResultsFormat: JUnit #     'JUnit'
-    testResultsFiles: '**/*.xml'
+    testResultsFiles: '**/junit*.xml'
     searchFolder: 'C:\UFT_Launcher\UFT\UFTWorking\res\Report_$(Build.BuildNumber)'
     testRunTitle: '$(System.DefinitionName)_$(Build.BuildNumber)'
 
