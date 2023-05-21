@@ -20,12 +20,27 @@ variables:
   value: 'C:\UFT_Launcher\UFT\UFTWorking'
 
 steps:
+- task: PowerShell@2
+  inputs:
+    targetType: 'inline'
+    script: |
+      # Write your PowerShell commands here.
+      Remove-Item "C:\UFT_Launcher\UFT\UFTWorking\res\Report*" -Recurse -Force
+
+- task: PowerShell@2
+  inputs:
+    targetType: 'inline'
+    script: |
+      # Write your PowerShell commands here.
+      Remove-Item "D:\Demo\Demo_1\Report*" -Recurse -Force
+      Remove-Item "D:\Demo\Demo_2\Report*" -Recurse -Force
+
 
 - task: RunFromFileSystemTask@5
   inputs:
     testPathInput: |
-      d:\demo\demo
-      d:\demo\demo
+      d:\demo_1\demo
+      d:\demo_2\demo
     uploadArtifact: 'no'
     mcAuthType: 'basic'
 
@@ -39,3 +54,6 @@ steps:
     testRunTitle: '$(System.DefinitionName)_$(Build.BuildNumber)'
 
 
+- task: PublishReleaseArtifact@1
+  inputs:
+    artifactPath: 'd:\demo\demo1'
