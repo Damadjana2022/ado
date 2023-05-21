@@ -39,8 +39,8 @@ steps:
 - task: RunFromFileSystemTask@5
   inputs:
     testPathInput: |
-      d:\demo_1\demo
-      d:\demo_2\demo
+      d:\demo\demo_1
+      d:\demo\demo_2
     uploadArtifact: 'no'
     mcAuthType: 'basic'
 
