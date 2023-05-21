@@ -6,13 +6,36 @@
 trigger:
 - main
 
+  
+# Azure DevOps self hosted agents, VM pool
 pool:
-  name: Lenovo13
+  name: Default
+
+#Global settings
+variables:
+- group: CCH-1
+
+# Path to local folder on HOST from pool where is UFT Launcher
+- name: UFT_LAUNCHER
+  value: 'C:\UFT_Launcher\UFT\UFTWorking'
 
 steps:
-- task: CmdLine@2
+
+- task: RunFromFileSystemTask@5
   inputs:
-    script: |
-      echo Write your commands here
-      
-      echo Hello world
+    testPathInput: |
+      $(Build.SourcesDirectory)\demo
+      d:\demo\demo
+    uploadArtifact: 'no'
+    mcAuthType: 'basic'
+
+
+# JOB UFT/ALM Reporte 
+- task: PublishTestResults@2
+  inputs:
+    testResultsFormat: JUnit #     'JUnit'
+    testResultsFiles: '**/*.xml'
+    searchFolder: 'C:\UFT_Launcher\UFT\UFTWorking\res\Report_$(Build.BuildNumber)'
+    testRunTitle: '$(System.DefinitionName)_$(Build.BuildNumber)'
+
+
