@@ -24,8 +24,8 @@ steps:
 - task: RunFromFileSystemTask@5
   inputs:
     testPathInput: |
-      $(Build.SourcesDirectory)\demo\demo1
-      $(Build.SourcesDirectory)\demo\demo1
+      $(Build.SourcesDirectory)\demo\demo_1
+      $(Build.SourcesDirectory)\demo\demo_2
     uploadArtifact: 'no'
     mcAuthType: 'basic'
 
