@@ -18,7 +18,3 @@ steps:
     echo See https://aka.ms/yaml
   displayName: 'Run a multi-line script'
 
-- task: VSBuild@1
-  inputs:
-    solution: '**\UftDeveloperTestProject1\*.sln'
-    configuration: 'release'
