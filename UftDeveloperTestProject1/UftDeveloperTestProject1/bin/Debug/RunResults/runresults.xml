@@ -1,0 +1,109 @@
+<Results>
+  <GeneralInfo>
+    <RunStartTime>2023-05-24 16:04:29</RunStartTime>
+    <Timezone>GMT+0300 (Eastern European Summer Time)</Timezone>
+    <OrchestrationToolName>UnitTestAdapter:</OrchestrationToolName>
+    <ReportTitle>UFT Developer Report</ReportTitle>
+    <CustomFields name="MC Server Address" value="https://192.168.254.138:8443/" />
+  </GeneralInfo>
+  <ReportNode type="Run">
+    <Data>
+      <StartTime>2023-05-24 16:04:29</StartTime>
+      <Duration>2</Duration>
+      <Result>Passed</Result>
+      <ErrorText></ErrorText>
+      <Links></Links>
+      <Extension>
+        <Any>
+          <IconKey>Run</IconKey>
+          <IsHtmlErrorText>true</IsHtmlErrorText>
+        </Any>
+      </Extension>
+      <Name>Run Results</Name>
+      <Environment>
+        <OSInfo><![CDATA[Windows_NT 10.0.22000]]></OSInfo>
+        <HostName>Lenovo13</HostName>
+        <NumberOfCores>4</NumberOfCores>
+        <TotalMemory>8082</TotalMemory>
+        <Locale><![CDATA[en-US]]></Locale>
+        <Timezone><![CDATA[GMT+0300 (Eastern European Summer Time)]]></Timezone>
+        <User><![CDATA[lenovo13\ajex]]></User>
+      </Environment>
+      <TestedApplication />
+      <ToolName>UFT Developer</ToolName>
+      <ToolVersion><![CDATA[2022.0]]></ToolVersion>
+      <Description> </Description>
+    </Data>
+    <ReportNode type="Assembly">
+      <Data>
+        <Name>UftDeveloperTestProject1</Name>
+        <Description><![CDATA[Version: 1.0.0.0]]></Description>
+        <StartTime>5/24/2023 4:04:30 PM</StartTime>
+        <Duration>1</Duration>
+        <Result>Passed</Result>
+        <Video></Video>
+        <ErrorText></ErrorText>
+        <Links></Links>
+        <Extension>
+          <Any>
+            <IconKey>Assembly</IconKey>
+            <IsHtmlErrorText>true</IsHtmlErrorText>
+          </Any>
+        </Extension>
+      </Data>
+      <ReportNode type="Namespace">
+        <Data>
+          <Name>UftDeveloperTestProject1</Name>
+          <Description><![CDATA[]]></Description>
+          <StartTime>5/24/2023 4:04:30 PM</StartTime>
+          <Duration>1</Duration>
+          <Result>Passed</Result>
+          <Video></Video>
+          <ErrorText></ErrorText>
+          <Links></Links>
+          <Extension>
+            <Any>
+              <IconKey>Namespace</IconKey>
+              <IsHtmlErrorText>true</IsHtmlErrorText>
+            </Any>
+          </Extension>
+        </Data>
+        <ReportNode type="Class">
+          <Data>
+            <Name>UftDeveloperTest</Name>
+            <Description><![CDATA[]]></Description>
+            <StartTime>5/24/2023 4:04:30 PM</StartTime>
+            <Duration>1</Duration>
+            <Result>Passed</Result>
+            <Video></Video>
+            <ErrorText></ErrorText>
+            <Links></Links>
+            <Extension>
+              <Any>
+                <IconKey>Class</IconKey>
+                <IsHtmlErrorText>true</IsHtmlErrorText>
+              </Any>
+            </Extension>
+          </Data>
+          <ReportNode type="Test">
+            <Data>
+              <Name>TestMethod1</Name>
+              <Description><![CDATA[]]></Description>
+              <StartTime>2023-05-24 16:04:30</StartTime>
+              <Duration>1</Duration>
+              <Result>Passed</Result>
+              <ErrorText></ErrorText>
+              <Links></Links>
+              <Extension>
+                <Any>
+                  <IconKey>Test</IconKey>
+                  <IsHtmlErrorText>true</IsHtmlErrorText>
+                </Any>
+              </Extension>
+            </Data>
+          </ReportNode>
+        </ReportNode>
+      </ReportNode>
+    </ReportNode>
+  </ReportNode>
+</Results>

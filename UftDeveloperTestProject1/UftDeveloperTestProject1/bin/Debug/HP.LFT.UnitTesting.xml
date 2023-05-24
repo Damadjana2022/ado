@@ -1,0 +1,335 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>HP.LFT.UnitTesting</name>
+    </assembly>
+    <members>
+        <member name="T:HP.LFT.UnitTesting.DataDriving.DataSource">
+            <summary>
+            Class for enabling data-driving of parameterized UFT Developer tests.
+            </summary>
+        </member>
+        <member name="M:HP.LFT.UnitTesting.DataDriving.DataSource.GetDataTable">
+            <summary>
+            Gets the data table attached to the current test configuration when running a parameterized test from ALM.
+            </summary>
+            <returns>A list of data rows, each represented by an array of strings.</returns>        
+        </member>
+        <member name="T:HP.LFT.UnitTesting.DataDriving.DataSourceException">
+            <summary>
+            The exception that is thrown when an error occurs while performing data-driven operations.
+            </summary>
+        </member>
+        <member name="M:HP.LFT.UnitTesting.DataDriving.DataSourceException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            Initializes a new instance of the <see cref="T:HP.LFT.UnitTesting.DataDriving.DataSourceException"/> class with serialized data.
+            </summary>
+            <param name="info">The <see cref="T:System.Runtime.Serialization.SerializationInfo"/> that holds the serialized object data about the exception being thrown. </param>
+            <param name="context">The <see cref="T:System.Runtime.Serialization.StreamingContext"/> that contains contextual information about the source or destination. </param>
+        </member>
+        <member name="M:HP.LFT.UnitTesting.DataDriving.DataSourceException.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:HP.LFT.UnitTesting.DataDriving.DataSourceException"/> class.
+            </summary>
+        </member>
+        <member name="M:HP.LFT.UnitTesting.DataDriving.DataSourceException.#ctor(System.String,System.Exception)">
+            <summary>
+            Initializes a new instance of the <see cref="T:HP.LFT.UnitTesting.DataDriving.DataSourceException"/> class with a specified error message and a reference to the inner exception that is the cause of this exception.
+            </summary>
+            <param name="message">The error message that explains the reason for the exception. </param>
+            <param name="exception">The exception that is the cause of the current exception.</param>
+        </member>
+        <member name="M:HP.LFT.UnitTesting.DataDriving.DataSourceException.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:HP.LFT.UnitTesting.DataDriving.DataSourceException"/> class with a specified error message.
+            </summary>
+            <param name="message">The error message that explains the reason for the exception. </param>
+        </member>
+        <member name="P:HP.LFT.UnitTesting.DataDriving.DataSourceException.ClassName">
+            <summary>
+            Gets or sets the name of the test class to be run.
+            </summary>
+            <value>
+            The name of the test class.
+            </value>
+        </member>
+        <member name="P:HP.LFT.UnitTesting.DataDriving.DataSourceException.MethodName">
+            <summary>
+            Gets or sets the name of the test method to be run.
+            </summary>
+            <value>
+            The name of the test method.
+            </value>
+        </member>
+        <member name="T:HP.LFT.UnitTesting.NUnit3UnitTestBase">
+            <summary>
+            The base class of the UFT Developer Visual Studio template classes that are provided when creating a new UFT Developer NUnit 3 test project.
+            </summary>
+            <remarks>This class encapsulates all the functionality related to running UFT Developer tests and creating the UFT Developer HTML report.</remarks>
+        </member>
+        <member name="M:HP.LFT.UnitTesting.NUnit3UnitTestBase.TestSuiteTearDown">
+            <summary>
+            This method is called by UFT Developer Visual Studio templates' GlobalTeardown to clean up the NUnit 3 test class.
+            </summary>
+        </member>
+        <member name="M:HP.LFT.UnitTesting.NUnit3UnitTestBase.Init(System.String)">
+            <summary>
+            Cancels the initialization of the SDK and Reporter.
+            </summary>
+        </member>
+        <member name="T:HP.LFT.UnitTesting.ParametersAttribute">
+            <summary>
+            Attribute of test method which defines input parameter names for this method
+            </summary>
+        </member>
+        <member name="M:HP.LFT.UnitTesting.ParametersAttribute.#ctor(System.String[])">
+            <summary>
+            ParametersAttribute constructor
+            </summary>
+            <param name="almParameterNames">Sequence of input parameter names</param>
+        </member>
+        <member name="T:HP.LFT.UnitTesting.UnitTestSuiteBase">
+            <summary>
+            The base class of the UFT Developer Visual Studio template classes that are provided when creating a new UFT Developer test project.
+            <remarks>This class is used by NUnit 3 template base class SetupFixture.</remarks>
+            </summary>
+            <remarks>This class encapsulates all the functionality related to running UFT Developer tests and creating the UFT Developer HTML report.</remarks>
+        </member>
+        <member name="M:HP.LFT.UnitTesting.UnitTestSuiteBase.TestSuiteTearDown">
+            <summary>
+            This method is called by UFT Developer Visual Studio templates' GlobalTeardown to clean up the test class.
+            </summary>
+        </member>
+        <member name="M:HP.LFT.UnitTesting.UnitTestSuiteBase.ClearSDK">
+            <summary>
+            Clears the SDK.
+            </summary>
+        </member>
+        <member name="M:HP.LFT.UnitTesting.UnitTestSuiteBase.Init(System.String)">
+            <summary>
+            Initializes the SDK and the Reporter.
+            </summary>
+        </member>
+        <member name="M:HP.LFT.UnitTesting.UnitTestSuiteBase.InitSDK">
+            <summary>
+            Initializes the SDK.
+            </summary>
+            <exception cref="T:HP.LFT.SDK.GeneralLeanFtException">Thrown when SDK initialization fails</exception>
+            <exception cref="T:HP.LFT.Common.ErrorHandling.RuntimeEngineLifecycleException">Thrown when runtime engine fails to start</exception>
+        </member>
+        <member name="M:HP.LFT.UnitTesting.UnitTestSuiteBase.TestSuiteSetup(System.String)">
+            <summary>
+            This method is called by UFT Developer Visual Studio templates' GlobalSetup to initialize the test class.  
+            </summary>
+        </member>
+        <member name="M:HP.LFT.UnitTesting.UnitTestSuiteBase.GetReportConfiguration">
+            <summary>
+            Returns a <see cref="T:HP.LFT.Report.Configuration.ReportConfiguration"/> instance with the values from the 'App.config' of the assembly returned by <see cref="M:HP.LFT.UnitTesting.UnitTestSuiteBase.GetConfigurationAssembly"/>.
+            </summary>
+            <remarks>By default, returns the ReportConfiguration representing the Report section of app.config from the current assembly.  
+            <para>When overriding, you can provide a <see cref="T:HP.LFT.Report.ReportConfiguration"/> instance with the assembly of another test, for example a central settings assembly that all tests use.</para></remarks>
+            <returns><see cref="T:HP.LFT.Report.ReportConfiguration"/></returns>
+        </member>
+        <member name="M:HP.LFT.UnitTesting.UnitTestSuiteBase.GetSdkConfiguration">
+            <summary>
+            Returns an <seealso cref="T:HP.LFT.SDK.SdkConfiguration"/> instance with the values from the 'App.config' of the assembly returned by <see cref="M:HP.LFT.UnitTesting.UnitTestSuiteBase.GetConfigurationAssembly"/>.
+            </summary>
+            <remarks>By default, returns the SdkConfiguration representing the SDK section of app.config from the current assembly.  
+            <para>When overriding, you can provide a <see cref="T:HP.LFT.SDK.SdkConfiguration"/> instance with the assembly of another test, for example a central settings assembly that all tests use.</para></remarks>
+            <returns><see cref="T:HP.LFT.SDK.SdkConfiguration"/></returns>
+        </member>
+        <member name="M:HP.LFT.UnitTesting.UnitTestSuiteBase.GetConfigurationAssembly">
+            <summary>
+            Returns the <see cref="T:System.Reflection.Assembly"/> for the currently loaded configuration.
+            </summary>
+            <remarks>By default, returns the Assembly representing the app.config of the current assembly. 
+            <para>When overriding, you can provide a <see cref="T:System.Reflection.Assembly"/> instance with the assembly of another test, for example a central settings assembly that all tests use.</para></remarks>
+            <returns><see cref="T:System.Reflection.Assembly"/></returns>
+        </member>
+        <member name="T:HP.LFT.UnitTesting.OutputParameters">
+            <summary>
+            Attribute of test method which defines output parameter names for this method
+            </summary>
+        </member>
+        <member name="M:HP.LFT.UnitTesting.OutputParameters.#ctor(System.String[])">
+            <summary>
+            OutputParameters constructor
+            </summary>
+            <param name="almParameterNames">Sequence of output parameter names</param>
+        </member>
+        <member name="T:HP.LFT.UnitTesting.Properties.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:HP.LFT.UnitTesting.Properties.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:HP.LFT.UnitTesting.Properties.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:HP.LFT.UnitTesting.Properties.Resources.DataSource_CouldNotFindDataColumnForMethodArgument">
+            <summary>
+              Looks up a localized string similar to Could not find data column for method argument &apos;{0}&apos;.
+            </summary>
+        </member>
+        <member name="P:HP.LFT.UnitTesting.Properties.Resources.DataSource_DataNotFound">
+            <summary>
+              Looks up a localized string similar to Data could not be found. This data source is valid only when running from ALM..
+            </summary>
+        </member>
+        <member name="P:HP.LFT.UnitTesting.Properties.Resources.DataSource_IsPathValid_DataPathIsEmpty">
+            <summary>
+              Looks up a localized string similar to Data path is empty.
+            </summary>
+        </member>
+        <member name="P:HP.LFT.UnitTesting.Properties.Resources.DataSource_IsPathValid_DataPathIsInvalid">
+            <summary>
+              Looks up a localized string similar to Data path is invalid.
+            </summary>
+        </member>
+        <member name="P:HP.LFT.UnitTesting.Properties.Resources.DataSource_MethodArgumentsDifferFromParameters">
+            <summary>
+              Looks up a localized string similar to Method &apos;{0}&apos; has {1} argument(s) while {2} parameter(s) defined in the received data..
+            </summary>
+        </member>
+        <member name="P:HP.LFT.UnitTesting.Properties.Resources.DataSource_ValidateInputParameters_Could_not_find_the_input_parameters_mapped_to_the_method_arguments">
+            <summary>
+              Looks up a localized string similar to Could not find the input parameter(s) mapped to the method argument(s): {0}. Method: &apos;{1}&apos;..
+            </summary>
+        </member>
+        <member name="P:HP.LFT.UnitTesting.Properties.Resources.DataSource_ValidateOutputParameters_Could_not_find_the_output_parameters_mapped_to_the_entity_output_parameters">
+            <summary>
+              Looks up a localized string similar to Could not find the output parameter(s) mapped to the entity output parameter(s): {0}. Method: &apos;{1}&apos;..
+            </summary>
+        </member>
+        <member name="P:HP.LFT.UnitTesting.Properties.Resources.DataSourceException_DataSourceException_General_data_source_error_occurred_">
+            <summary>
+              Looks up a localized string similar to General data-source error occurred..
+            </summary>
+        </member>
+        <member name="P:HP.LFT.UnitTesting.Properties.Resources.Reflector_ClassNotFoundInAssembly">
+            <summary>
+              Looks up a localized string similar to Class &apos;{0}&apos; is not found in assembly &apos;{1}&apos;.
+            </summary>
+        </member>
+        <member name="P:HP.LFT.UnitTesting.Properties.Resources.Reflector_MethodNotFoundInClass">
+            <summary>
+              Looks up a localized string similar to Method &apos;{0}&apos; is not found in class &apos;{1}&apos;.
+            </summary>
+        </member>
+        <member name="P:HP.LFT.UnitTesting.Properties.Resources.Reflector_PropertyDefinedAsOutputParameterButNotFoundInClass">
+            <summary>
+              Looks up a localized string similar to Property &apos;{0}&apos; defined as output parameter of method &apos;{1}&apos; but not found in class &apos;{2}&apos;.
+            </summary>
+        </member>
+        <member name="P:HP.LFT.UnitTesting.Properties.Resources.UnitTestBase_ALM_Parameter_mismatch_node_title">
+            <summary>
+              Looks up a localized string similar to Parameter mismatch.
+            </summary>
+        </member>
+        <member name="P:HP.LFT.UnitTesting.Properties.Resources.UnitTestBase_InitSDK_Failed_launching_the_runtime_engine">
+            <summary>
+              Looks up a localized string similar to Failed launching the runtime engine..
+            </summary>
+        </member>
+        <member name="P:HP.LFT.UnitTesting.Properties.Resources.UnitTestBase_InitSDK_The_LeanFT_runtime_engine_cannot_start">
+            <summary>
+              Looks up a localized string similar to The UFT Developer runtime engine cannot start because UFT or Sprinter is currently running..
+            </summary>
+        </member>
+        <member name="P:HP.LFT.UnitTesting.Properties.Resources.UnitTestBase_InitSDK_The_LeanFT_runtime_engine_cannot_start_conflicting_role">
+            <summary>
+              Looks up a localized string similar to Failed to launch the runtime engine for a standalone instance of UFT Developer. UFT Developer is already running on this machine as a Grid or Grid Node..
+            </summary>
+        </member>
+        <member name="P:HP.LFT.UnitTesting.Properties.Resources.UnitTestBase_SaveOutputData_Unable_to_write_output_parameters">
+            <summary>
+              Looks up a localized string similar to Unable to write output parameters: data source path is empty..
+            </summary>
+        </member>
+        <member name="T:HP.LFT.UnitTesting.UnitTestBase">
+            <summary>
+            The base class of the UFT Developer Visual Studio template classes that are provided when creating a new UFT Developer test project.
+            </summary>
+            <remarks>This class encapsulates all the functionality related to running UFT Developer tests and creating the UFT Developer HTML report.</remarks>
+        </member>
+        <member name="M:HP.LFT.UnitTesting.UnitTestBase.TestSuiteSetup(System.String)">
+            <summary>
+            This method is called by UFT Developer Visual Studio templates' GlobalSetup to initialize the test class.  
+            </summary>
+        </member>
+        <member name="M:HP.LFT.UnitTesting.UnitTestBase.GetAlternativeTestName">
+            <summary>
+            Returns the alternative Test name that is used whenever framework errors occur.  
+            </summary>
+            <remarks>This can be useful to set the start and end points of a test in your class if the runner you are using does not successfully pass UFT Developer test names to the UFT Developer report.  
+            <para>In this case, by default the UFT Developer report displays: [Undefined]. Override to provide an alternative test method name.</para></remarks> 
+            <returns>The alternative test name.</returns>
+        </member>
+        <member name="M:HP.LFT.UnitTesting.UnitTestBase.GetAlternativeClassName">
+            <summary>
+            Returns the alternative Class name that is used whenever framework errors occur.  
+            </summary>
+            <remarks>This can be useful to set the start and end points of a class in your project if the runner you are using does not successfully pass UFT Developer class names to the UFT Developer report.  
+            <para>In this case, by default the HTML report displays: [Undefined]. Override to provide an alternative test method name.</para></remarks> 
+            <returns>The alternative test name.</returns>
+        </member>
+        <member name="M:HP.LFT.UnitTesting.UnitTestBase.TestSetUp">
+            <summary>
+            This method is called by UFT Developer Visual Studio templates' BasicSetUp, which runs before each test method.
+            </summary>
+        </member>
+        <member name="M:HP.LFT.UnitTesting.UnitTestBase.TestTearDown">
+            <summary>
+            This method is called by UFT Developer Visual Studio templates' BasicTearDown, which runs after each test method.
+            </summary>
+        </member>
+        <member name="P:HP.LFT.UnitTesting.UnitTestBase.ALM">
+            <summary>
+            The default ALM data-source for data-driven UFT Developer tests.
+            <remarks>Use for NUnit 2.6x tests.</remarks>
+            </summary>
+        </member>
+        <member name="P:HP.LFT.UnitTesting.UnitTestBase.ALMStatic">
+            <summary>
+            The static ALM data-source for data-driven UFT Developer tests.
+            <remarks>Use for NUnit 3.x tests.</remarks>
+            </summary>
+        </member>
+        <member name="P:HP.LFT.UnitTesting.UnitTestBase.Reporter">
+            <summary>
+            Returns the Reporter of type <seealso cref="T:HP.LFT.Report.IReporter"/> used for reporting events.
+            </summary>
+        </member>
+        <member name="M:HP.LFT.UnitTesting.UnitTestBase.GetClassName">
+            <summary>
+            This method is implemented in UFT Developer Visual Studio templates to get the running class name provided by the selected framework (NUnit/MSTest) TestContext.
+            </summary>
+            <returns>The running class name.</returns>
+        </member>
+        <member name="M:HP.LFT.UnitTesting.UnitTestBase.GetTestName">
+            <summary>
+            This method is implemented in UFT Developer Visual Studio templates to get the running test name provided by the selected framework (NUnit/MSTest) TestContext.
+            </summary>
+            <returns>The running test name.</returns>
+        </member>
+        <member name="M:HP.LFT.UnitTesting.UnitTestBase.GetFrameworkTestResult">
+            <summary>
+            This method is implemented in UFT Developer Visual Studio templates to get the running test/class status provided by the selected framework (NUnit/MSTest) TestContext.
+            </summary>
+            <returns>The running test status.</returns>
+        </member>
+        <member name="M:HP.LFT.UnitTesting.UnitTestBase.GetTestParameters">
+            <summary>
+            This method is implemented in UFT Developer Visual Studio template to get the running test parameters provided by MSTest TestContext.
+            </summary>
+            <returns>The running test parameters.</returns>
+        </member>
+    </members>
+</doc>

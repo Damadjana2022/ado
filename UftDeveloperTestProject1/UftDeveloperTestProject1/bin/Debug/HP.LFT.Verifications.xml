@@ -1,0 +1,624 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>HP.LFT.Verifications</name>
+    </assembly>
+    <members>
+        <member name="T:HP.LFT.Verifications.IVerifyHandler">
+            <summary>
+            Set of all Verification methods
+            </summary>
+        </member>
+        <member name="T:HP.LFT.Verifications.Verify">
+            <summary>
+            Class for verifying expected values in your application.
+            </summary>
+            <remarks>When a Verify method returns a false value, the step fails, but the failure does not throw an exception or cause the test to stop running.</remarks>
+        </member>
+        <member name="M:HP.LFT.Verifications.Verify.GreaterOrEqual(System.Int32,System.Int32,System.String,System.String,System.Drawing.Image)">
+            <summary>
+            Checks whether the first number specified is greater than or equal to the second for integer values.
+            </summary>
+            <param name="arg1">The first value, expected to be the larger number.</param>
+            <param name="arg2">The second value, expected to be the smaller number.</param>
+            <param name="verificationName">The verification title.</param>
+            <param name="verificationDescription">The verification description.</param>
+            <param name="verificationImage">An image related to the verification.</param>    
+        </member>
+        <member name="M:HP.LFT.Verifications.Verify.GreaterOrEqual(System.UInt32,System.UInt32,System.String,System.String,System.Drawing.Image)">
+            <summary>
+            Checks whether the first number specified is greater than or equal to the second for unsigned integer values.
+            </summary>
+            <param name="arg1">The first value, expected to be the larger number.</param>
+            <param name="arg2">The second value, expected to be the smaller number.</param>
+            <param name="verificationName">The verification title.</param>
+            <param name="verificationDescription">The verification description.</param>
+            <param name="verificationImage">An image related to the verification.</param>        
+        </member>
+        <member name="M:HP.LFT.Verifications.Verify.GreaterOrEqual(System.Int64,System.Int64,System.String,System.String,System.Drawing.Image)">
+            <summary>
+            Checks whether the first number specified is greater than or equal to the second for long values.
+            </summary>
+            <param name="arg1">The first value, expected to be the larger number.</param>
+            <param name="arg2">The second value, expected to be the smaller number.</param>
+            <param name="verificationName">The verification title.</param>
+            <param name="verificationDescription">The verification description.</param>
+            <param name="verificationImage">An image related to the verification.</param>        int arg2, Image verificationImage
+        </member>
+        <member name="M:HP.LFT.Verifications.Verify.GreaterOrEqual(System.UInt64,System.UInt64,System.String,System.String,System.Drawing.Image)">
+            <summary>
+            Checks whether the first number specified is greater than or equal to the second for unsigned long values.
+            </summary>
+            <param name="arg1">The first value, expected to be the larger number.</param>
+            <param name="arg2">The second value, expected to be the smaller number.</param>
+            <param name="verificationName">The verification title.</param>
+            <param name="verificationDescription">The verification description.</param>
+            <param name="verificationImage">An image related to the verification.</param>        
+        </member>
+        <member name="M:HP.LFT.Verifications.Verify.GreaterOrEqual(System.Decimal,System.Decimal,System.String,System.String,System.Drawing.Image)">
+            <summary>
+            Checks whether the first number specified is greater than or equal to the second for decimal values.
+            </summary>
+            <param name="arg1">The first value, expected to be the larger number.</param>
+            <param name="arg2">The second value, expected to be the smaller number.</param>
+            <param name="verificationName">The verification title.</param>
+            <param name="verificationDescription">The verification description.</param>
+            <param name="verificationImage">An image related to the verification.</param>                
+        </member>
+        <member name="M:HP.LFT.Verifications.Verify.GreaterOrEqual(System.Double,System.Double,System.String,System.String,System.Drawing.Image)">
+            <summary>
+            Checks whether the first number specified is greater than or equal to the second for double values.
+            </summary>
+            <param name="arg1">The first value, expected to be the larger number.</param>
+            <param name="arg2">The second value, expected to be the smaller number.</param>
+            <param name="verificationName">The verification title.</param>
+            <param name="verificationDescription">The verification description.</param>
+            <param name="verificationImage">An image related to the verification.</param>                
+        </member>
+        <member name="M:HP.LFT.Verifications.Verify.GreaterOrEqual(System.Single,System.Single,System.String,System.String,System.Drawing.Image)">
+            <summary>
+            Checks whether the first number specified is greater than or equal to the second for float values.
+            </summary>
+            <param name="arg1">The first value, expected to be the larger number.</param>
+            <param name="arg2">The second value, expected to be the smaller number.</param>
+            <param name="verificationName">The verification title.</param>
+            <param name="verificationDescription">The verification description.</param>
+            <param name="verificationImage">An image related to the verification.</param>                
+        </member>
+        <member name="M:HP.LFT.Verifications.Verify.GreaterOrEqual(System.IComparable,System.IComparable,System.String,System.String,System.Drawing.Image)">
+            <summary>
+            Checks whether the first number specified is greater than or equal to the second for IComparable values.
+            </summary>
+            <param name="arg1">The first value, expected to be the larger number.</param>
+            <param name="arg2">The second value, expected to be the smaller number.</param>
+            <param name="verificationName">The verification title.</param>
+            <param name="verificationDescription">The verification description.</param>
+            <param name="verificationImage">An image related to the verification.</param>                
+        </member>
+        <member name="M:HP.LFT.Verifications.Verify.LessOrEqual(System.Int32,System.Int32,System.String,System.String,System.Drawing.Image)">
+            <summary>
+            Checks whether the first number specified is less than or equal to the second for integer values. 
+            </summary>
+            <param name="arg1">The first value, expected to be the smaller number.</param>
+            <param name="arg2">The second value, expected to be the larger number.</param>
+            <param name="verificationName">The verification title.</param>
+            <param name="verificationDescription">The verification description.</param>
+            <param name="verificationImage">An image related to the verification.</param>                
+        </member>
+        <member name="M:HP.LFT.Verifications.Verify.LessOrEqual(System.UInt32,System.UInt32,System.String,System.String,System.Drawing.Image)">
+            <summary>
+            Checks whether the first number specified is less than or equal to the second for unsigned integer values.
+            </summary>
+            <param name="arg1">The first value, expected to be the smaller number.</param>
+            <param name="arg2">The second value, expected to be the larger number.</param>
+            <param name="verificationName">The verification title.</param>
+            <param name="verificationDescription">The verification description.</param>
+            <param name="verificationImage">An image related to the verification.</param>               
+        </member>
+        <member name="M:HP.LFT.Verifications.Verify.LessOrEqual(System.Int64,System.Int64,System.String,System.String,System.Drawing.Image)">
+            <summary>
+            Checks whether the first number specified is less than or equal to the second for long values.
+            </summary>
+            <param name="arg1">The first value, expected to be the smaller number.</param>
+            <param name="arg2">The second value, expected to be the larger number.</param>
+            <param name="verificationName">The verification title.</param>
+            <param name="verificationDescription">The verification description.</param>
+            <param name="verificationImage">An image related to the verification.</param>                
+        </member>
+        <member name="M:HP.LFT.Verifications.Verify.LessOrEqual(System.UInt64,System.UInt64,System.String,System.String,System.Drawing.Image)">
+            <summary>
+            Checks whether the first number specified is less than or equal to the second for unsigned long values.
+            </summary>
+            <param name="arg1">The first value, expected to be the smaller number.</param>
+            <param name="arg2">The second value, expected to be the larger number.</param>
+            <param name="verificationName">The verification title.</param>
+            <param name="verificationDescription">The verification description.</param>
+            <param name="verificationImage">An image related to the verification.</param>                
+        </member>
+        <member name="M:HP.LFT.Verifications.Verify.LessOrEqual(System.Decimal,System.Decimal,System.String,System.String,System.Drawing.Image)">
+            <summary>
+            Checks whether the first number specified is less than or equal to the second for decimal values. 
+            </summary>
+            <param name="arg1">The first value, expected to be the smaller number.</param>
+            <param name="arg2">The second value, expected to be the larger number.</param>
+            <param name="verificationName">The verification title.</param>
+            <param name="verificationDescription">The verification description.</param>
+            <param name="verificationImage">An image related to the verification.</param>        
+        </member>
+        <member name="M:HP.LFT.Verifications.Verify.LessOrEqual(System.Double,System.Double,System.String,System.String,System.Drawing.Image)">
+            <summary>
+            Checks whether the first number specified is less than or equal to the second for double values.
+            </summary>
+            <param name="arg1">The first value, expected to be the smaller number.</param>
+            <param name="arg2">The second value, expected to be the larger number.</param>
+            <param name="verificationName">The verification title.</param>
+            <param name="verificationDescription">The verification description.</param>
+            <param name="verificationImage">An image related to the verification.</param>        
+        </member>
+        <member name="M:HP.LFT.Verifications.Verify.LessOrEqual(System.Single,System.Single,System.String,System.String,System.Drawing.Image)">
+            <summary>
+            Checks whether the first number specified is less than or equal to the second for float values.
+            </summary>
+            <param name="arg1">The first value, expected to be the smaller number.</param>
+            <param name="arg2">The second value, expected to be the larger number.</param>
+            <param name="verificationName">The verification title.</param>
+            <param name="verificationDescription">The verification description.</param>
+            <param name="verificationImage">An image related to the verification.</param>        
+        </member>
+        <member name="M:HP.LFT.Verifications.Verify.LessOrEqual(System.IComparable,System.IComparable,System.String,System.String,System.Drawing.Image)">
+            <summary>
+            Checks whether the first number specified is less than or equal to the second for IComparable values. 
+            </summary>
+            <param name="arg1">The first value, expected to be the smaller number.</param>
+            <param name="arg2">The second value, expected to be the larger number.</param>
+            <param name="verificationName">The verification title.</param>
+            <param name="verificationDescription">The verification description.</param>
+            <param name="verificationImage">An image related to the verification.</param>        
+        </member>
+        <member name="M:HP.LFT.Verifications.Verify.Contains(System.Collections.IEnumerable,System.Object,System.String,System.String,System.Drawing.Image)">
+            <summary>
+            Checks whether the provided collection contains the object provided in the second argument.
+            </summary>
+            <param name="collection">The collection to check.</param>
+            <param name="expected">The object to search for.</param>
+            <param name="verificationName">The verification title.</param>
+            <param name="verificationDescription">The verification description.</param>
+            <param name="verificationImage">An image related to the verification.</param>        
+        </member>
+        <member name="M:HP.LFT.Verifications.Verify.AreEqual(System.Int32,System.Int32,System.String,System.String,System.Drawing.Image)">
+            <summary>
+            Checks whether two integer values are equal.
+            </summary>
+            <param name="expected">The expected value.</param>
+            <param name="actual">The actual value.</param>
+            <param name="verificationName">The verification title.</param>
+            <param name="verificationDescription">The verification description.</param>
+            <param name="verificationImage">An image related to the verification.</param>        
+        </member>
+        <member name="M:HP.LFT.Verifications.Verify.AreEqual(System.Int64,System.Int64,System.String,System.String,System.Drawing.Image)">
+            <summary>
+            Checks whether two long values are equal.
+            </summary>
+            <param name="expected">The expected value.</param>
+            <param name="actual">The actual value.</param>
+            <param name="verificationName">The verification title.</param>
+            <param name="verificationDescription">The verification description.</param>
+            <param name="verificationImage">An image related to the verification.</param>        
+        </member>
+        <member name="M:HP.LFT.Verifications.Verify.AreEqual(System.UInt32,System.UInt32,System.String,System.String,System.Drawing.Image)">
+            <summary>
+            Checks whether two unsigned integer values are equal.
+            </summary>
+            <param name="expected">The expected value.</param>
+            <param name="actual">The actual value.</param>
+            <param name="verificationName">The verification title.</param>
+            <param name="verificationDescription">The verification description.</param>
+            <param name="verificationImage">An image related to the verification.</param>        
+        </member>
+        <member name="M:HP.LFT.Verifications.Verify.AreEqual(System.Decimal,System.Decimal,System.String,System.String,System.Drawing.Image)">
+            <summary>
+            Checks whether two decimal values are equal.
+            </summary>
+            <param name="expected">The expected value.</param>
+            <param name="actual">The actual value.</param>
+            <param name="verificationName">The verification title.</param>
+            <param name="verificationDescription">The verification description.</param>
+            <param name="verificationImage">An image related to the verification.</param>        
+        </member>
+        <member name="M:HP.LFT.Verifications.Verify.AreEqual(System.Double,System.Double,System.String,System.String,System.Drawing.Image)">
+            <summary>
+            Checks whether two double values are equal.
+            </summary>
+            <param name="expected">The expected value.</param>
+            <param name="actual">The actual value.</param>
+            <param name="verificationName">The verification title.</param>
+            <param name="verificationDescription">The verification description.</param>
+            <param name="verificationImage">An image related to the verification.</param>        
+        </member>
+        <member name="M:HP.LFT.Verifications.Verify.AreEqual(System.String,System.String,System.String,System.String,System.Drawing.Image)">
+            <summary>
+            Checks whether two strings values are equal.
+            </summary>
+            <param name="expected">The expected value.</param>
+            <param name="actual">The actual value.</param>
+            <param name="verificationName">The verification title.</param>
+            <param name="verificationDescription">The verification description.</param>
+            <param name="verificationImage">An image related to the verification.</param>        
+        </member>
+        <member name="M:HP.LFT.Verifications.Verify.AreEqual(System.Collections.IEnumerable,System.Collections.IEnumerable,System.String,System.String,System.Drawing.Image)">
+            <summary>
+            Checks whether two IEnumerable values are equal.
+            </summary>
+            <param name="expected">The expected value.</param>
+            <param name="actual">The actual value.</param>
+            <param name="verificationName">The verification title.</param>
+            <param name="verificationDescription">The verification description.</param>
+            <param name="verificationImage">An image related to the verification.</param>        
+        </member>
+        <member name="M:HP.LFT.Verifications.Verify.AreEqual(System.IComparable,System.IComparable,System.String,System.String,System.Drawing.Image)">
+            <summary>
+            Checks whether two objects are equal.
+            </summary>
+            <param name="expected">The expected value.</param>
+            <param name="actual">The actual value.</param>
+            <param name="verificationName">The verification title.</param>
+            <param name="verificationDescription">The verification description.</param>
+            <param name="verificationImage">An image related to the verification.</param>        
+        </member>
+        <member name="M:HP.LFT.Verifications.Verify.AreNotEqual(System.Int32,System.Int32,System.String,System.String,System.Drawing.Image)">
+            <summary>
+            Checks whether two integer values are different.
+            </summary>
+            <param name="expected">The expected value.</param>
+            <param name="actual">The actual value.</param>
+            <param name="verificationName">The verification title.</param>
+            <param name="verificationDescription">The verification description.</param>
+            <param name="verificationImage">An image related to the verification.</param>        
+        </member>
+        <member name="M:HP.LFT.Verifications.Verify.AreNotEqual(System.Int64,System.Int64,System.String,System.String,System.Drawing.Image)">
+            <summary>
+            Checks whether two long values are different.
+            </summary>
+            <param name="expected">The expected value.</param>
+            <param name="actual">The actual value.</param>
+            <param name="verificationName">The verification title.</param>
+            <param name="verificationDescription">The verification description.</param>
+            <param name="verificationImage">An image related to the verification.</param>        
+        </member>
+        <member name="M:HP.LFT.Verifications.Verify.AreNotEqual(System.UInt32,System.UInt32,System.String,System.String,System.Drawing.Image)">
+            <summary>
+            Checks whether two unsigned integer values are different.
+            </summary>
+            <param name="expected">The expected value.</param>
+            <param name="actual">The actual value.</param>
+            <param name="verificationName">The verification title.</param>
+            <param name="verificationDescription">The verification description.</param>
+            <param name="verificationImage">An image related to the verification.</param>        
+        </member>
+        <member name="M:HP.LFT.Verifications.Verify.AreNotEqual(System.Decimal,System.Decimal,System.String,System.String,System.Drawing.Image)">
+            <summary>
+            Checks whether two decimal values are different.
+            </summary>
+            <param name="expected">The expected value.</param>
+            <param name="actual">The actual value.</param>
+            <param name="verificationName">The verification title.</param>
+            <param name="verificationDescription">The verification description.</param>
+            <param name="verificationImage">An image related to the verification.</param>        
+        </member>
+        <member name="M:HP.LFT.Verifications.Verify.AreNotEqual(System.Double,System.Double,System.String,System.String,System.Drawing.Image)">
+            <summary>
+            Checks whether two double values are different.
+            </summary>
+            <param name="expected">The expected value.</param>
+            <param name="actual">The actual value.</param>
+            <param name="verificationName">The verification title.</param>
+            <param name="verificationDescription">The verification description.</param>
+            <param name="verificationImage">An image related to the verification.</param>        
+        </member>
+        <member name="M:HP.LFT.Verifications.Verify.AreNotEqual(System.String,System.String,System.String,System.String,System.Drawing.Image)">
+            <summary>
+            Checks whether two strings values are different.
+            </summary>
+            <param name="expected">The expected value.</param>
+            <param name="actual">The actual value.</param>
+            <param name="verificationName">The verification title.</param>
+            <param name="verificationDescription">The verification description.</param>
+            <param name="verificationImage">An image related to the verification.</param>        
+        </member>
+        <member name="M:HP.LFT.Verifications.Verify.AreNotEqual(System.Collections.IEnumerable,System.Collections.IEnumerable,System.String,System.String,System.Drawing.Image)">
+            <summary>
+            Checks whether two IEnumerable values are different.
+            </summary>
+            <param name="expected">The expected value.</param>
+            <param name="actual">The actual value.</param>
+            <param name="verificationName">The verification title.</param>
+            <param name="verificationDescription">The verification description.</param>
+            <param name="verificationImage">An image related to the verification.</param>        
+        </member>
+        <member name="M:HP.LFT.Verifications.Verify.AreNotEqual(System.IComparable,System.IComparable,System.String,System.String,System.Drawing.Image)">
+            <summary>
+            Checks whether two enum values are different.
+            </summary>
+            <param name="expected">The expected value.</param>
+            <param name="actual">The actual value.</param>
+            <param name="verificationName">The verification title.</param>
+            <param name="verificationDescription">The verification description.</param>
+            <param name="verificationImage">An image related to the verification.</param>        
+        </member>
+        <member name="M:HP.LFT.Verifications.Verify.AreNotEqualIgnoringCase(System.String,System.String,System.String,System.String,System.Drawing.Image)">
+            <summary>
+            Checks whether two string values are different, ignoring case.
+            </summary>
+            <param name="expected">The expected string.</param>
+            <param name="actual">The actual string.</param>
+            <param name="verificationName">The verification title.</param>
+            <param name="verificationDescription">The verification description.</param>
+            <param name="verificationImage">An image related to the verification.</param>        
+        </member>
+        <member name="M:HP.LFT.Verifications.Verify.Greater(System.Int32,System.Int32,System.String,System.String,System.Drawing.Image)">
+            <summary>
+            Checks whether the first number specified is greater than the second for integer values.
+            </summary>
+            <param name="arg1">The first value, expected to be the larger number.</param>
+            <param name="arg2">The second value, expected to be the smaller number.</param>
+            <param name="verificationName">The verification title.</param>
+            <param name="verificationDescription">The verification description.</param>
+            <param name="verificationImage">An image related to the verification.</param>        
+        </member>
+        <member name="M:HP.LFT.Verifications.Verify.Greater(System.UInt32,System.UInt32,System.String,System.String,System.Drawing.Image)">
+            <summary>
+            Checks whether the first number specified is greater than the second for unsigned integer values.
+            </summary>
+            <param name="arg1">The first value, expected to be the larger number.</param>
+            <param name="arg2">The second value, expected to be the smaller number.</param>
+            <param name="verificationName">The verification title.</param>
+            <param name="verificationDescription">The verification description.</param>
+            <param name="verificationImage">An image related to the verification.</param>        
+        </member>
+        <member name="M:HP.LFT.Verifications.Verify.Greater(System.Int64,System.Int64,System.String,System.String,System.Drawing.Image)">
+            <summary>
+            Checks whether the first number specified is greater than the second for long values.
+            </summary>
+            <param name="arg1">The first value, expected to be the larger number.</param>
+            <param name="arg2">The second value, expected to be the smaller number.</param>
+            <param name="verificationName">The verification title.</param>
+            <param name="verificationDescription">The verification description.</param>
+            <param name="verificationImage">An image related to the verification.</param>        
+        </member>
+        <member name="M:HP.LFT.Verifications.Verify.Greater(System.UInt64,System.UInt64,System.String,System.String,System.Drawing.Image)">
+            <summary>
+            Checks whether the first number specified is greater than the second for unsigned long values.
+            </summary>
+            <param name="arg1">The first value, expected to be the larger number.</param>
+            <param name="arg2">The second value, expected to be the smaller number.</param>
+            <param name="verificationName">The verification title.</param>
+            <param name="verificationDescription">The verification description.</param>
+            <param name="verificationImage">An image related to the verification.</param>        
+        </member>
+        <member name="M:HP.LFT.Verifications.Verify.Greater(System.Decimal,System.Decimal,System.String,System.String,System.Drawing.Image)">
+            <summary>
+            Checks whether the first number specified is greater than the second for decimal values.
+            </summary>
+            <param name="arg1">The first value, expected to be the larger number.</param>
+            <param name="arg2">The second value, expected to be the smaller number.</param>
+            <param name="verificationName">The verification title.</param>
+            <param name="verificationDescription">The verification description.</param>
+            <param name="verificationImage">An image related to the verification.</param>        
+        </member>
+        <member name="M:HP.LFT.Verifications.Verify.Greater(System.Double,System.Double,System.String,System.String,System.Drawing.Image)">
+            <summary>
+            Checks whether the first number specified is greater than the second for double values.
+            </summary>
+            <param name="arg1">The first value, expected to be the larger number.</param>
+            <param name="arg2">The second value, expected to be the smaller number.</param>
+            <param name="verificationName">The verification title.</param>
+            <param name="verificationDescription">The verification description.</param>
+            <param name="verificationImage">An image related to the verification.</param>        
+        </member>
+        <member name="M:HP.LFT.Verifications.Verify.Greater(System.Single,System.Single,System.String,System.String,System.Drawing.Image)">
+            <summary>
+            Checks whether the first number specified is greater than the second for float values.
+            </summary>
+            <param name="arg1">The first value, expected to be the larger number.</param>
+            <param name="arg2">The second value, expected to be the smaller number.</param>
+            <param name="verificationName">The verification title.</param>
+            <param name="verificationDescription">The verification description.</param>
+            <param name="verificationImage">An image related to the verification.</param>        
+        </member>
+        <member name="M:HP.LFT.Verifications.Verify.Greater(System.IComparable,System.IComparable,System.String,System.String,System.Drawing.Image)">
+            <summary>
+            Checks whether the first number specified is greater than the second for IComparable values. 
+            </summary>
+            <param name="arg1">The first value, expected to be the larger number.</param>
+            <param name="arg2">The second value, expected to be the smaller number.</param>
+            <param name="verificationName">The verification title.</param>
+            <param name="verificationDescription">The verification description.</param>
+            <param name="verificationImage">An image related to the verification.</param>        
+        </member>
+        <member name="M:HP.LFT.Verifications.Verify.Less(System.Int32,System.Int32,System.String,System.String,System.Drawing.Image)">
+            <summary>
+            Checks whether the first number specified is less than the second for integer values.
+            </summary>
+            <param name="arg1">The first value, expected to be the smaller number.</param>
+            <param name="arg2">The second value, expected to be the larger number.</param>
+            <param name="verificationName">The verification title.</param>
+            <param name="verificationDescription">The verification description.</param>
+            <param name="verificationImage">An image related to the verification.</param>        
+        </member>
+        <member name="M:HP.LFT.Verifications.Verify.Less(System.UInt32,System.UInt32,System.String,System.String,System.Drawing.Image)">
+            <summary>
+            Checks whether the first number specified is less than the second for unsigned integer values. 
+            </summary>
+            <param name="arg1">The first value, expected to be the smaller number.</param>
+            <param name="arg2">The second value, expected to be the larger number.</param>
+            <param name="verificationName">The verification title.</param>
+            <param name="verificationDescription">The verification description.</param>
+            <param name="verificationImage">An image related to the verification.</param>        
+        </member>
+        <member name="M:HP.LFT.Verifications.Verify.Less(System.Int64,System.Int64,System.String,System.String,System.Drawing.Image)">
+            <summary>
+            Checks whether the first number specified is less than the second for long values.
+            </summary>
+            <param name="arg1">The first value, expected to be the smaller number.</param>
+            <param name="arg2">The second value, expected to be the larger number.</param>
+            <param name="verificationName">The verification title.</param>
+            <param name="verificationDescription">The verification description.</param>
+            <param name="verificationImage">An image related to the verification.</param>        
+        </member>
+        <member name="M:HP.LFT.Verifications.Verify.Less(System.UInt64,System.UInt64,System.String,System.String,System.Drawing.Image)">
+            <summary>
+            Checks whether the first number specified is less than the second for unsigned long values. 
+            </summary>
+            <param name="arg1">The first value, expected to be the smaller number.</param>
+            <param name="arg2">The second value, expected to be the larger number.</param>
+            <param name="verificationName">The verification title.</param>
+            <param name="verificationDescription">The verification description.</param>
+            <param name="verificationImage">An image related to the verification.</param>        
+        </member>
+        <member name="M:HP.LFT.Verifications.Verify.Less(System.Decimal,System.Decimal,System.String,System.String,System.Drawing.Image)">
+            <summary>
+            Checks whether the first number specified is less than the second for decimal values. 
+            </summary>
+            <param name="arg1">The first value, expected to be the smaller number.</param>
+            <param name="arg2">The second value, expected to be the larger number.</param>
+            <param name="verificationName">The verification title.</param>
+            <param name="verificationDescription">The verification description.</param>
+            <param name="verificationImage">An image related to the verification.</param>        
+        </member>
+        <member name="M:HP.LFT.Verifications.Verify.Less(System.Double,System.Double,System.String,System.String,System.Drawing.Image)">
+            <summary>
+            Checks whether the first number specified is less than the second for double values. 
+            </summary>
+            <param name="arg1">The first value, expected to be the smaller number.</param>
+            <param name="arg2">The second value, expected to be the larger number.</param>
+            <param name="verificationName">The verification title.</param>
+            <param name="verificationDescription">The verification description.</param>
+            <param name="verificationImage">An image related to the verification.</param>        
+        </member>
+        <member name="M:HP.LFT.Verifications.Verify.Less(System.Single,System.Single,System.String,System.String,System.Drawing.Image)">
+            <summary>
+            Checks whether the first number specified is less than the second for float values. 
+            </summary>
+            <param name="arg1">The first value, expected to be the smaller number.</param>
+            <param name="arg2">The second value, expected to be the larger number.</param>
+            <param name="verificationName">The verification title.</param>
+            <param name="verificationDescription">The verification description.</param>
+            <param name="verificationImage">An image related to the verification.</param>        
+        </member>
+        <member name="M:HP.LFT.Verifications.Verify.Less(System.IComparable,System.IComparable,System.String,System.String,System.Drawing.Image)">
+            <summary>
+            Checks whether the first number specified is less than the second for IComparable values.
+            </summary>
+            <param name="arg1">The first value, expected to be the smaller number.</param>
+            <param name="arg2">The second value, expected to be the larger number.</param>
+            <param name="verificationName">The verification title.</param>
+            <param name="verificationDescription">The verification description.</param>
+            <param name="verificationImage">An image related to the verification.</param>        
+        </member>
+        <member name="M:HP.LFT.Verifications.Verify.IsTrue(System.Boolean,System.String,System.String,System.Drawing.Image)">
+            <summary>
+            Checks whether the specified condition is true.
+            </summary>
+            <param name="condition">The condition to check.</param>
+            <param name="verificationName">The verification title.</param>
+            <param name="verificationDescription">The verification description.</param>
+            <param name="verificationImage">An image related to the verification.</param>        
+        </member>
+        <member name="M:HP.LFT.Verifications.Verify.IsFalse(System.Boolean,System.String,System.String,System.Drawing.Image)">
+            <summary>
+            Checks whether the specified condition is false.
+            </summary>
+            <param name="condition">The condition to check.</param>
+            <param name="verificationName">The verification title.</param>
+            <param name="verificationDescription">The verification description.</param>
+            <param name="verificationImage">An image related to the verification.</param>        
+        </member>
+        <member name="M:HP.LFT.Verifications.Verify.IsNullOrEmpty(System.Collections.IEnumerable,System.String,System.String,System.Drawing.Image)">
+            <summary>
+            Checks whether the provided collection is null or empty.
+            </summary>
+            <param name="collection">The collection to check.</param>
+            <param name="verificationName">The verification title.</param>
+            <param name="verificationDescription">The verification description.</param>
+            <param name="verificationImage">An image related to the verification.</param>        
+        </member>
+        <member name="M:HP.LFT.Verifications.Verify.IsNotNullOrEmpty(System.Collections.IEnumerable,System.String,System.String,System.Drawing.Image)">
+            <summary>
+            Checks whether the provided collection is not null or empty.
+            </summary>
+            <param name="collection">The collection to check.</param>
+            <param name="verificationName">The verification title.</param>
+            <param name="verificationDescription">The verification description.</param>
+            <param name="verificationImage">An image related to the verification.</param>        
+        </member>
+        <member name="M:HP.LFT.Verifications.Verify.IsNullOrEmpty(System.String,System.String,System.String,System.Drawing.Image)">
+            <summary>
+            Checks whether the specified string is null or empty.
+            </summary>
+            <param name="aString">The string to check.</param>
+            <param name="verificationName">The verification title.</param>
+            <param name="verificationDescription">The verification description.</param>
+            <param name="verificationImage">An image related to the verification.</param>        
+        </member>
+        <member name="M:HP.LFT.Verifications.Verify.IsNotNullOrEmpty(System.String,System.String,System.String,System.Drawing.Image)">
+            <summary>
+            Checks whether the specified string is not null or empty. 
+            </summary>
+            <param name="aString">The string to check</param>
+            <param name="verificationName">The verification title.</param>
+            <param name="verificationDescription">The verification description.</param>
+            <param name="verificationImage">An image related to the verification.</param>        
+        </member>
+        <member name="M:HP.LFT.Verifications.Verify.Contains(System.String,System.String,System.String,System.String,System.Drawing.Image)">
+            <summary>
+            Checks whether the first string specified is contained within the second string. 
+            </summary>
+            <param name="expected">The string to search for.</param>
+            <param name="actual">The string to check.</param>
+            <param name="verificationName">The verification title.</param>
+            <param name="verificationDescription">The verification description.</param>
+            <param name="verificationImage">An image related to the verification.</param>        
+        </member>
+        <member name="M:HP.LFT.Verifications.Verify.StartsWith(System.String,System.String,System.String,System.String,System.Drawing.Image)">
+            <summary>
+            Checks whether the 'expected' string is the first part of the 'actual' string.
+            </summary>
+            <param name="expected">The string to search for.</param>
+            <param name="actual">The string to check.</param>
+            <param name="verificationName">The verification title.</param>
+            <param name="verificationDescription">The verification description.</param>
+            <param name="verificationImage">An image related to the verification.</param>        
+        </member>
+        <member name="M:HP.LFT.Verifications.Verify.EndsWith(System.String,System.String,System.String,System.String,System.Drawing.Image)">
+            <summary>
+            Checks whether the 'expected' string is the last part of the 'actual' string.
+            </summary>
+            <param name="expected">The string to search for.</param>
+            <param name="actual">The string to check.</param>
+            <param name="verificationName">The verification title.</param>
+            <param name="verificationDescription">The verification description.</param>
+            <param name="verificationImage">An image related to the verification.</param>        
+        </member>
+        <member name="M:HP.LFT.Verifications.Verify.AreEqualIgnoringCase(System.String,System.String,System.String,System.String,System.Drawing.Image)">
+            <summary>
+            Checks whether two string values are equal, ignoring case. 
+            </summary>
+            <param name="expected">The expected string.</param>
+            <param name="actual">The actual string.</param>
+            <param name="verificationName">The verification title.</param>
+            <param name="verificationDescription">The verification description.</param>
+            <param name="verificationImage">An image related to the verification.</param>        
+        </member>
+        <member name="M:HP.LFT.Verifications.Verify.IsMatch(System.String,System.String,System.String,System.String,System.Drawing.Image)">
+            <summary>
+            Checks whether the specified regular expression matches the specified string value.
+            </summary>
+            <param name="actual">The string to check.</param>
+            <param name="regexPattern">The regular expression value to search for.
+            Use standard C# regular expression syntax.</param>
+            <param name="verificationName">The verification title.</param>
+            <param name="verificationDescription">The verification description.</param>
+            <param name="verificationImage">An image related to the verification.</param>        
+        </member>
+    </members>
+</doc>
