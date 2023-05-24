@@ -21,5 +21,4 @@ steps:
 - task: VSBuild@1
   inputs:
     solution: '**\UftDeveloperTestProject1\*.sln'
-    platform: 'x64'
     configuration: 'release'
