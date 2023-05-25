@@ -47,7 +47,6 @@ steps:
     artifactPath: '$(Build.SourcesDirectory)\demo\demo_2\Report1'
 
 
-
 - task: publishhtmlreport@1
   inputs:
     htmlType: 'genericHTML'
