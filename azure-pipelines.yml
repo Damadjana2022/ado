@@ -45,3 +45,16 @@ steps:
 - task: PublishReleaseArtifact@1
   inputs:
     artifactPath: '$(Build.SourcesDirectory)\demo\demo_2\Report1'
+
+
+- task: publishhtmlreport@1
+  inputs:
+    htmlType: 'genericHTML'
+    htmlPath: '$(Build.SourcesDirectory)\demo\demo_1\Report1'
+    JmeterReportsPath: 'run_results.html'
+
+- task: publishhtmlreport@1
+  inputs:
+    htmlType: 'genericHTML'
+    htmlPath: '$(Build.SourcesDirectory)\demo\demo_2\Report1'
+    JmeterReportsPath: 'run_results.html'
