@@ -1,0 +1,47 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+trigger:
+- main
+
+  
+# Azure DevOps self hosted agents, VM pool
+pool:
+  name: Default
+
+#Global settings
+variables:
+- group: CCH-1
+
+# Path to local folder on HOST from pool where is UFT Launcher
+- name: UFT_LAUNCHER
+  value: 'C:\UFT_Launcher\UFT\UFTWorking'
+
+steps:
+
+- task: RunFromFileSystemTask@5
+  inputs:
+    testPathInput: |
+      $(Build.SourcesDirectory)\demo\ADOIntegrationTest
+    uploadArtifact: 'no'
+    mcAuthType: 'basic'
+
+
+# JOB UFT/ALM Reporte 
+- task: PublishTestResults@2
+  inputs:
+    testResultsFormat: JUnit #     'JUnit'
+    testResultsFiles: '**/junit*.xml'
+    searchFolder: 'C:\UFT_Launcher\UFT\UFTWorking\res\Report_$(Build.BuildNumber)'
+    testRunTitle: '$(System.DefinitionName)_$(Build.BuildNumber)'
+
+- task: PublishReleaseArtifact@1
+  inputs:
+    artifactPath: '$(Build.SourcesDirectory)\demo\ADOIntegrationTest\Report1'
+
+
+- task: PublishHtmlReport@1
+  inputs:
+    reportDir: '$(Build.SourcesDirectory)\demo\ADOIntegrationTest\Report1\run_results.html'
