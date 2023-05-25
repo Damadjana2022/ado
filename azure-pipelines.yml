@@ -50,4 +50,4 @@ steps:
 - task: publishhtmlreport@1
   inputs:
     htmlType: 'genericHTML'
-    htmlPath: '$(Build.SourcesDirectory)\demo\demo_1\Report1\run_results.html'
+    htmlPath: '$(Build.SourcesDirectory)\demo\demo_1\Report1'
