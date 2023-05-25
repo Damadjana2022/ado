@@ -50,11 +50,10 @@ steps:
 - task: publishhtmlreport@1
   inputs:
     htmlType: 'genericHTML'
-    htmlPath: '$(Build.SourcesDirectory)\demo\demo_1\Report1'
-    JmeterReportsPath: 'run_results.html'
+    htmlPath: '$(Build.SourcesDirectory)\demo\demo_1\Report1\run_results.html'
+
 
 - task: publishhtmlreport@1
   inputs:
     htmlType: 'genericHTML'
-    htmlPath: '$(Build.SourcesDirectory)\demo\demo_2\Report1'
-    JmeterReportsPath: 'run_results.html'
+    htmlPath: '$(Build.SourcesDirectory)\demo\demo_2\Report1\run_results.html'
