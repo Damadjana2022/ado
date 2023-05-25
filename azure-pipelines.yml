@@ -46,8 +46,6 @@ steps:
   inputs:
     artifactPath: '$(Build.SourcesDirectory)\demo\demo_2\Report1'
 
-- task: PublishHtmlReport@1
-  inputs:
-    reportDir: 'd:\demo\demo_1\Report1\run_result.html'
+
 
 
