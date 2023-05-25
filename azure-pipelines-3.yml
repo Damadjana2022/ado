@@ -24,7 +24,7 @@ steps:
 - task: RunFromFileSystemTask@5
   inputs:
     testPathInput: '$(Build.SourcesDirectory)\demo\ADOIntegrationTest'
-    cancelRunOnFailure: false
+    cancelRunOnFailure: true
     uploadArtifact: 'no'
     mcAuthType: 'basic'
 
