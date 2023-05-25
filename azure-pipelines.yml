@@ -49,3 +49,6 @@ steps:
 
 
 
+- task: PublishHtmlReport@1
+  inputs:
+    reportDir: '$(Build.SourcesDirectory)\demo\demo_2\Report1\run_result.html'
